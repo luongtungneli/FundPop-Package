@@ -1,8 +1,8 @@
 import React from 'react';
 import {getPercentageProgressBar} from '../controller';
 
-function ProgressBar({campaign}) {
-  const {funded, goal, appBlockEditor} = campaign;
+function ProgressBar(props: {campaign:any}) {
+  const {funded, goal, appBlockEditor} = props.campaign;
   const {
     progressBarBlock: {blockBackgroundColor, backgroundColor, size, progressColor},
   } = appBlockEditor[0];

@@ -7,8 +7,8 @@ import LabelContainer from './LabelContainer';
 import DividerContainer from './DividerContainer';
 import TimeContainer from './TimeContainer';
 
-function AppBlocks({data, price}) {
-  const {backers, campaign} = data;
+function AppBlocks({data}:any) {
+  const {backers, campaign, currencyUnit} = data;
 
   return (
     <div className="fp-progress-container">
@@ -16,7 +16,7 @@ function AppBlocks({data, price}) {
         <TitleContainer campaign={campaign[0]}/>
         <div className='flex items-center justify-between flex-wrap'>
           <RaisedTarget campaign={campaign[0]}/>
-          <RaisedTargetValue campaign={campaign[0]} price={price}/>
+          <RaisedTargetValue campaign={campaign[0]} currencyUnit={currencyUnit}/>
         </div>
         <ProgressBar campaign={campaign[0]}/>
         <LabelContainer campaign={campaign[0]} backer={backers}/>

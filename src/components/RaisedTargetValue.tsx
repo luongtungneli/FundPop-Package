@@ -1,11 +1,12 @@
 import {useMoney} from '@shopify/hydrogen';
 import React from 'react';
 import { getFontStyles } from '../controller';
+import { CurrencyCode } from '@shopify/hydrogen-react/storefront-api-types';
 
-function RaisedTargetValue({campaign, price}) {
-  const {funded, goal, goalMode, appBlockEditor} = campaign;
+function RaisedTargetValue(props: {campaign: any, currencyUnit: CurrencyCode}) {
+  const {funded, goal, goalMode, appBlockEditor} = props.campaign;
   const {revenueValueBlock: {backgroundColor, texts}} = appBlockEditor[0]
-  const formatedPrice = useMoney(price);
+  const formatedPrice = useMoney({amount: '1', currencyCode: props.currencyUnit});
 
   const raisedText = `${
     goalMode === 'currency' ? formatedPrice.currencySymbol : ''

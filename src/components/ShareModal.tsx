@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function ShareModal({visible, closeModal, name}) {
+function ShareModal(props: {visible: boolean, closeModal: () => void, name: string}) {
+  const {visible, closeModal, name} = props
   const [copyText, setCopyText] = useState('Copy');
   const productLink = window.location.href;
   if (!visible) return null;
@@ -10,10 +11,10 @@ function ShareModal({visible, closeModal, name}) {
     <div
       id="fp-modal"
       className="fixed z-[99999] w-full h-full overflow-hidden bg-black bg-[rgba(0,0,0,0.4)] left-0 top-0"
-      onClick={(e) => {
-        const id: string = e.target['id']
-        if(id === 'fp-modal') 
-          closeModal();
+      onClick={(e:React.MouseEvent) => {
+        // const id: string = e.target['id']
+        // if(id === 'fp-modal') 
+        //   closeModal();
       }}
     >
       <div

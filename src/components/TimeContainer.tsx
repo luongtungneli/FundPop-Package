@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {useInterval} from 'react-use';
 import {getFontStyles} from '../controller';
 
-function TimeContainer({campaign}) {
-  const {endTime, appBlockEditor} = campaign;
+function TimeContainer(props:{campaign:any}) {
+  const {endTime, appBlockEditor} = props.campaign;
   const {
     timeBlock: {backgroundColor, texts},
   } = appBlockEditor[0];
@@ -18,7 +18,7 @@ function TimeContainer({campaign}) {
     remainingTime ? 1000 : null,
   );
 
-  const getCountdown = (timeLeft) => {
+  const getCountdown = (timeLeft:number) => {
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
@@ -33,7 +33,7 @@ function TimeContainer({campaign}) {
     return {days, hours, minutes, seconds};
   };
 
-  const updateCountdown = (timeLeft) => {
+  const updateCountdown = (timeLeft:number) => {
     const {days, hours, minutes, seconds} = getCountdown(timeLeft);
     // Set values for countdown
     /* Set labels for time units */

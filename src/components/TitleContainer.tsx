@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import {getFontStyles} from '../controller';
 import ShareModal from './ShareModal';
 
-function TitleContainer({campaign}) {
+function TitleContainer(props: {campaign:any}) {
   const [visible, setVisible] = useState(false);
-  const {name, appBlockEditor} = campaign;
+  const {name, appBlockEditor} = props.campaign;
   const {
     headerBlock: {
       iconColor,

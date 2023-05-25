@@ -1,9 +1,9 @@
 import React from 'react';
 import { getFontStyles, getPercentageProgressBar } from '../controller';
 
-function LabelContainer({campaign, backer}) {
-  const backerText = backer > 1 ? 'backers' : 'backer';
-  const {funded, goal, appBlockEditor} = campaign;
+function LabelContainer(props: {campaign:any, backer:number}) {
+  const backerText = props.backer > 1 ? 'backers' : 'backer';
+  const {funded, goal, appBlockEditor} = props.campaign;
   const {revenueSubValueBlock: {backgroundColor, texts}} = appBlockEditor[0]
 
   const containerStyle = {
@@ -37,7 +37,7 @@ function LabelContainer({campaign, backer}) {
       <div id="fp-backer-container">
         <div style={backerStyle} className="fp-lable-item flex flex-row items-center gap-x-2">
           <p id="fp-totalBackers">
-            {backer}
+            {props.backer}
           </p>
           <span id="fp-backer-text">{backerText}</span>
         </div>

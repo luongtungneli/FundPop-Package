@@ -1,7 +1,7 @@
 import React from 'react';
 
-function DividerContainer({campaign}) {
-  const {appBlockEditor} = campaign
+function DividerContainer(props:{campaign:any}) {
+  const {appBlockEditor} = props.campaign
   const {dividerBlock: {backgroundColor, style, thickness, width, dividerColor}} = appBlockEditor[0]
 
   const containerStyle = {

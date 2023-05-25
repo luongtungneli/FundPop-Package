@@ -6,7 +6,7 @@ export const getPercentageProgressBar = (funded: number, goal: number) => {
 };
 
 export const getFontStyles = (fontStyles: [string]) => {
-  let fontStyleProperties = {};
+  let fontStyleProperties: {fontStyle?: string, fontWeight?: string} = {};
   if (fontStyles.includes('italic'))
     fontStyleProperties['fontStyle'] = 'italic';
   if (fontStyles.includes('bold')) fontStyleProperties['fontWeight'] = 'bold';

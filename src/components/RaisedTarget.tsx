@@ -1,8 +1,8 @@
 import React from 'react';
 import { getFontStyles } from '../controller';
 
-function RaisedTarget({campaign}) {
-  const {appBlockEditor} = campaign
+function RaisedTarget(props: {campaign:any}) {
+  const {appBlockEditor} = props.campaign
   const {revenueTitleBlock: {backgroundColor, texts}} = appBlockEditor[0]
 
   const containerStyle = {
