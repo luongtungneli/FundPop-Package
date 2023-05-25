@@ -1,0 +1,28 @@
+{
+  "name": "fundpop-app-blocks",
+  "version": "0.0.1",
+  "description": "Add your Fundpop Campaign to your Hydrogen storefront",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "author": "Luong Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/react": "^18.2.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.4.0",
+    "rollup": "^3.23.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "typescript": "^5.0.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts" 
+}
