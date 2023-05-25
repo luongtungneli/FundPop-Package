@@ -1,5 +1,6 @@
 import React from 'react';
 import {getPercentageProgressBar} from '../controller';
+import "./ProgressBar.css"
 
 function ProgressBar(props: {campaign:any}) {
   const {funded, goal, appBlockEditor} = props.campaign;
@@ -31,9 +32,9 @@ function ProgressBar(props: {campaign:any}) {
   }
 
   return (
-    <div style={containerStyle} className="fp-container-progress-bar py-2 px-5">
-      <div style={progressStyle} className="fp-progress-bar w-full h-2 rounded z-1">
-        <div style={progressBarStyle} id="fp-progress-bar__bar" className='h-full z-2 rounded'>
+    <div style={containerStyle} className="container-progress-bar">
+      <div style={progressStyle} className="progress-bar">
+        <div style={progressBarStyle} id="progress-bar__bar">
           <p></p>
         </div>
       </div>

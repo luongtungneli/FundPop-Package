@@ -1,12 +1,12 @@
 import {useMoney} from '@shopify/hydrogen';
 import React from 'react';
 import { getFontStyles } from '../controller';
-import { CurrencyCode } from '@shopify/hydrogen-react/storefront-api-types';
+import "./RaisedTargetValue.css"
 
-function RaisedTargetValue(props: {campaign: any, currencyUnit: CurrencyCode}) {
-  const {funded, goal, goalMode, appBlockEditor} = props.campaign;
+function RaisedTargetValue(props: {campaign: any}) {
+  const {funded, goal, goalMode, appBlockEditor, currencyUnit} = props.campaign;
   const {revenueValueBlock: {backgroundColor, texts}} = appBlockEditor[0]
-  const formatedPrice = useMoney({amount: '1', currencyCode: props.currencyUnit});
+  const formatedPrice = useMoney({amount: '1', currencyCode: currencyUnit || 'USD'});
 
   const raisedText = `${
     goalMode === 'currency' ? formatedPrice.currencySymbol : ''
@@ -34,11 +34,11 @@ function RaisedTargetValue(props: {campaign: any, currencyUnit: CurrencyCode}) {
   }
 
   return (
-    <div style={containerStyle} className="fp-raised-target-value flex w-full justify-between py-2 px-5">
-      <h3 style={totalRaisedStyle} id="fp-totalRaised">
+    <div style={containerStyle} className="raised-target-value">
+      <h3 style={totalRaisedStyle} id="totalRaised">
         {raisedText}
       </h3>
-      <h3 style={totalTargetStyle} id="fp-totalTarget">
+      <h3 style={totalTargetStyle} id="totalTarget">
         {targetText}
       </h3>
     </div>

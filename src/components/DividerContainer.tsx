@@ -1,4 +1,5 @@
 import React from 'react';
+import "./DividerContainer.css"
 
 function DividerContainer(props:{campaign:any}) {
   const {appBlockEditor} = props.campaign
@@ -17,8 +18,8 @@ function DividerContainer(props:{campaign:any}) {
   }
 
   return (
-    <div style={containerStyle} className="fp-divider-container w-full flex items-center justify-center py-2">
-      <div style={dividerStyle} className="fp-divider-line h-px w-full"></div>
+    <div style={containerStyle} className="divider-container">
+      <div style={dividerStyle} className="divider-line"></div>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+#countdown {
+	display: flex;
+	padding: 0 20px 8px 20px;
+	flex-wrap: wrap;
+	column-gap: 2px;
+	font-size: 12px;
+	justify-content: space-between;
+	border-radius: 0 0 8px 8px;
+}
+
+#time-text {
+	white-space: nowrap;
+	line-height: 100%;
+	margin: 18px 0 10px 0;
+}
+
+#time {
+	display: flex;
+	align-items: baseline;
+	flex-direction: row;
+	column-gap: 4px;
+	flex-wrap: wrap;
+}
+
+.spanName {
+	line-height: 100%;
+	margin: 18px 0 10px 0;
+}

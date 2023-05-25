@@ -1,5 +1,6 @@
 import React from 'react';
 import { getFontStyles, getPercentageProgressBar } from '../controller';
+import "./LabelContainer.css"
 
 function LabelContainer(props: {campaign:any, backer:number}) {
   const backerText = props.backer > 1 ? 'backers' : 'backer';
@@ -27,19 +28,19 @@ function LabelContainer(props: {campaign:any, backer:number}) {
   }
 
   return (
-    <div style={containerStyle} className="fp-lable flex items-center justify-between px-5">
-      <div id="fp-funded-container">
-        <div style={fundedStyle} className="fp-lable-item flex flex-row items-center gap-x-2">
-          <p id="fp-percentage">{getPercentageProgressBar(funded, goal)}%</p>
+    <div style={containerStyle} className="lable">
+      <div id="funded-container">
+        <div style={fundedStyle} className="lable-item">
+          <p id="percentage">{getPercentageProgressBar(funded, goal)}%</p>
           <span>funded</span>
         </div>
       </div>
-      <div id="fp-backer-container">
-        <div style={backerStyle} className="fp-lable-item flex flex-row items-center gap-x-2">
-          <p id="fp-totalBackers">
+      <div id="backer-container">
+        <div style={backerStyle} className="lable-item">
+          <p id="totalBackers">
             {props.backer}
           </p>
-          <span id="fp-backer-text">{backerText}</span>
+          <span id="backer-text">{backerText}</span>
         </div>
       </div>
     </div>

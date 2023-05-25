@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {getFontStyles} from '../controller';
 import ShareModal from './ShareModal';
+import "./TitleContainer.css"
 
 function TitleContainer(props: {campaign:any}) {
   const [visible, setVisible] = useState(false);
@@ -30,8 +31,7 @@ function TitleContainer(props: {campaign:any}) {
   return (
     <div
       style={abTitleStyle}
-      className={`flex relative justify-between m-0 py-4 px-5 rounded-t-lg`}
-      id="fp-ab-title-container"
+      id="ab-title-container"
     >
       <ShareModal
         name={name}
@@ -40,16 +40,17 @@ function TitleContainer(props: {campaign:any}) {
       />
       <p
         style={titleStyle}
-        className={`fp-campaign-title pb-2 w-full m-0 overflow-hidden text-ellipsis`}
+        className="campaign-title"
       >
         {name}
       </p>
       <div
         onClick={() => setVisible(true)}
-        className="fp-header-share-img cursor-pointer absolute flex justify-center items-center w-10 top-4 right-5 min-h-[40px]"
+        className="header-share-img"
+        id="ab-share-block"
       >
         <svg
-          id="fp-sharing-icon-svg"
+          id="sharing-icon-svg"
           width="20"
           height="20"
           viewBox="0 0 20 20"

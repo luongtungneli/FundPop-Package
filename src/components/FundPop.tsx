@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import AppBlocks from "./AppBlocks.jsx";
-import { getCampagin } from "../controller.js";
+import AppBlocks from "./AppBlocks";
+import { getCampagin } from "../controller";
 
 function FundPop(props: { productID: string }) {
     const splittedID = props.productID.split("/");
@@ -19,6 +19,7 @@ function FundPop(props: { productID: string }) {
     }, [props.productID]);
 
     return data ? <AppBlocks data={data}/> : null;
+
 }
 
 export default FundPop;

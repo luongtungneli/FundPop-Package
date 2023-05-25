@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import "./ShareModal.css"
 
 function ShareModal(props: {visible: boolean, closeModal: () => void, name: string}) {
   const {visible, closeModal, name} = props
@@ -10,33 +11,32 @@ function ShareModal(props: {visible: boolean, closeModal: () => void, name: stri
   return ReactDOM.createPortal(
     <div
       id="fp-modal"
-      className="fixed z-[99999] w-full h-full overflow-hidden bg-black bg-[rgba(0,0,0,0.4)] left-0 top-0"
-      onClick={(e:React.MouseEvent) => {
-        // const id: string = e.target['id']
-        // if(id === 'fp-modal') 
-        //   closeModal();
+      className="modal"
+      onClick={(e) => {
+        const target: any = e.target
+        if(target?.id === 'fp-modal') 
+          closeModal();
       }}
     >
       <div
-        id="fp-modal-content"
-        className="bg-white w-[340px] md:w-[600px] h-[248px] absolute -translate-x-2/4 -translate-y-2/4 shadow-[0px_3px_6px_-3px_rgba(23,24,24,0.08),0px_8px_20px_-4px_rgba(23,24,24,0.12)] border rounded-lg border-solid border-[#e1e3e5] left-2/4 top-2/4"
+        className="modal-content"
       >
-        <div className="flex shadow-[inset_0px_-1px_0px_#e1e3e5] p-5">
-          <h1 className="not-italic font-normal text-xl leading-7 text-[#202223] whitespace-nowrap text-ellipsis overflow-hidden min-w-[504px] leading-7 ml-0 mr-[30px] my-0">
+        <div className="modal-title">
+          <h1>
             Share
             {" "}
-            <span className="font-semibold">{name}</span>
+            <span className="product-title-sharing">{name}</span>
           </h1>
           <div
             onClick={closeModal}
-            className="text-xl text-[#5c5f62] cursor-pointer leading-[26px]"
+            className="close-button"
           >
             &times;
           </div>
         </div>
 
-        <div className="flex p-5 border-b-[#e1e3e5] border-b border-solid">
-          <div className="w-[475px] h-9 bg-white border rounded whitespace-nowrap text-ellipsis overflow-hidden text-sm leading-5 text-[#202223] items-center px-3 py-2 border-solid border-[#aeb4b9]">
+        <div className="modal-body">
+          <div className="input-link-product">
             {productLink}
           </div>
           <div
@@ -52,20 +52,20 @@ function ShareModal(props: {visible: boolean, closeModal: () => void, name: stri
                 console.error('Failed to copy: ', err);
               }
             }}
-            className="h-9 w-[75px] bg-[#008060] not-italic font-medium text-sm leading-5 text-center shadow-[0px_1px_0px_rgba(0,0,0,0.08),inset_0px_-1px_0px_rgba(0,0,0,0.2)] rounded text-white cursor-pointer ml-2 px-4 py-2"
+            className="copy-link-button"
           >
             {copyText}
           </div>
         </div>
 
-        <div className="pl-5">
-          <div className="text-sm text-[#202223] font-semibold leading-5 tracking-[0px] text-left pt-4">
+        <div className="modal-footer">
+          <div className="modal-another-sharing">
             Share on social media
           </div>
 
-          <div className="flex pt-3">
+          <div className="sharing-networks">
             <div
-              className="w-[89px] h-9 bg-white border rounded flex cursor-pointer no-underline mr-3 border-solid border-[#8c9196]"
+              className="sharing-network-button"
               id="twitter-sharing"
               onClick={() =>
                 window.open(
@@ -96,7 +96,7 @@ function ShareModal(props: {visible: boolean, closeModal: () => void, name: stri
             </div>
 
             <div
-              className="w-[89px] h-9 bg-white border rounded flex cursor-pointer no-underline mr-3 border-solid border-[#8c9196]"
+              className="sharing-network-button"
               id="fb-sharing"
               onClick={() =>
                 window.open(

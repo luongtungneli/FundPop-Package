@@ -1,0 +1,139 @@
+
+.modal {
+	position: fixed; /* Stay in place */
+	z-index: 9999; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+	background-color: #ffffff;
+	width: 600px;
+	height: 248px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 3px 6px -3px rgba(23, 24, 24, 0.08), 0px 8px 20px -4px rgba(23, 24, 24, 0.12);
+	border-radius: 8px;
+	border: 1px solid #e1e3e5;
+}
+.modal-title {
+	display: flex;
+	padding: 20px;
+	box-shadow: inset 0px -1px 0px #e1e3e5;
+}
+.modal-title h1 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #202223;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	min-width: 504px;
+	margin: 0 30px 0 0;
+	line-height: 28px;
+}
+h1 .product-title-sharing {
+	font-weight: 600;
+}
+.modal-title .close-button {
+	font-size: 20px;
+	color: #5c5f62;
+	cursor: pointer;
+	line-height: 26px;
+}
+
+.modal-content .modal-body {
+	padding: 20px;
+	display: flex;
+	border-bottom: 1px solid #e1e3e5;
+}
+
+.input-link-product {
+	padding: 8px 12px;
+	width: 475px;
+	background: #ffffff;
+	border: 1px solid #aeb4b9;
+	border-radius: 4px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 20px;
+	color: #202223;
+	align-items: center;
+}
+
+.copy-link-button {
+	margin-left: 8px;
+	padding: 8px 16px;
+	width: 75px;
+	background: #008060;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.modal-footer {
+	padding-left: 20px;
+}
+.modal-footer .modal-another-sharing {
+	padding-top: 16px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-align: left;
+}
+.sharing-networks {
+	padding-top: 12px;
+	display: flex;
+}
+.sharing-network-button {
+	width: 89px;
+	height: 36px;
+	background: rgba(255, 255, 255);
+	border: 1px solid #8c9196;
+	border-radius: 4px;
+	margin-right: 12px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+.sharing-network-button span {
+	color: #202223;
+	font-size: 14px;
+}
+.sharing-network-button svg {
+	width: 20px;
+	padding-right: 4px;
+	padding-left: 12px;
+}
+
+@media (max-width: 600px) {
+	.modal-content {
+		width: 340px;
+	}
+
+	.input-link-product {
+		width: 221px;
+	}
+
+	.modal-title h1 {
+		min-width: 244px;
+	}
+}

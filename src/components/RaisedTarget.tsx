@@ -1,5 +1,6 @@
 import React from 'react';
 import { getFontStyles } from '../controller';
+import "./RaisedTarget.css"
 
 function RaisedTarget(props: {campaign:any}) {
   const {appBlockEditor} = props.campaign
@@ -24,11 +25,11 @@ function RaisedTarget(props: {campaign:any}) {
   }
 
   return (
-    <div style={containerStyle} className="fp-raised-target-texts w-full flex py-2 px-5">
-      <div style={raisedStyle} className="fp-raised-text ml-0">
+    <div style={containerStyle} className="raised-target-texts">
+      <div style={raisedStyle} className="raised-text">
         Raised
       </div>
-      <div style={targetStyle} className="fp-target-text ml-auto mr-0">
+      <div style={targetStyle} className="target-text">
         Target
       </div>
     </div>

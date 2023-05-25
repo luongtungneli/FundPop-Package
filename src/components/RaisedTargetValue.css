@@ -1,0 +1,9 @@
+.raised-target-value {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 8px 20px;
+}
+.raised-target-value h3 {
+	line-height: 0px;
+}

@@ -1,0 +1,15 @@
+.lable {
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 0px;
+}
+
+.lable-item {
+	display: flex;
+	flex-direction: row;
+	column-gap: 8px;
+	align-items: center;
+	line-height: 100%;
+}
