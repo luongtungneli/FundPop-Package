@@ -43,9 +43,5 @@ export default function Product() {
     </>
   )
 ```
-
-
-<div>
-	<h2 style="color: red">NOTE:</h2>
-<span>The format of parameter ***productID*** is something like this: "**gid://shopify/Product/6923088920642**"</span>
-</div>
+## NOTE:
+The format of parameter ***productID*** is something like this: "**gid://shopify/Product/6923088920642**"
