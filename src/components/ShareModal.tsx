@@ -78,7 +78,6 @@ function ShareModal(props: {visible: boolean, closeModal: () => void, name: stri
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="pl-3 pr-1 pt-[7px] pb-[9px]"
               >
                 <g clipPath="url(#clip0_4917_23117)">
                   <path
@@ -109,7 +108,6 @@ function ShareModal(props: {visible: boolean, closeModal: () => void, name: stri
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="pl-3 pr-1 pt-[7px] pb-[9px]"
               >
                 <path
                   d="M12 5.5H9V3.5C9 2.948 9.448 2.5 10 2.5H11V0H9C7.343 0 6 1.343 6 3V5.5H4V8H6V16H9V8H11L12 5.5Z"
