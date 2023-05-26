@@ -31,15 +31,15 @@ function LabelContainer(props: {campaign:any, backer:number}) {
     <div style={containerStyle} className="lable">
       <div id="funded-container">
         <div style={fundedStyle} className="lable-item">
-          <p id="percentage">{getPercentageProgressBar(funded, goal)}%</p>
+          <span id="percentage">{getPercentageProgressBar(funded, goal)}%</span>
           <span>funded</span>
         </div>
       </div>
       <div id="backer-container">
         <div style={backerStyle} className="lable-item">
-          <p id="totalBackers">
+          <span id="totalBackers">
             {props.backer}
-          </p>
+          </span>
           <span id="backer-text">{backerText}</span>
         </div>
       </div>

@@ -34,9 +34,7 @@ function ProgressBar(props: {campaign:any}) {
   return (
     <div style={containerStyle} className="container-progress-bar">
       <div style={progressStyle} className="progress-bar">
-        <div style={progressBarStyle} id="progress-bar__bar">
-          <p></p>
-        </div>
+        <div style={progressBarStyle} id="progress-bar__bar"/>
       </div>
     </div>
   );

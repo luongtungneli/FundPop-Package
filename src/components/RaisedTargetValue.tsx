@@ -35,12 +35,12 @@ function RaisedTargetValue(props: {campaign: any}) {
 
   return (
     <div style={containerStyle} className="raised-target-value">
-      <h3 style={totalRaisedStyle} id="totalRaised">
+      <div style={totalRaisedStyle} id="totalRaised">
         {raisedText}
-      </h3>
-      <h3 style={totalTargetStyle} id="totalTarget">
+      </div>
+      <div style={totalTargetStyle} id="totalTarget">
         {targetText}
-      </h3>
+      </div>
     </div>
   );
 }
