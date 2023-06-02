@@ -1,6 +1,6 @@
 {
   "name": "fundpop-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add your Fundpop Campaign to your Hydrogen storefront",
   "scripts": {
     "rollup": "rollup -c",
