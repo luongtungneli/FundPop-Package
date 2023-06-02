@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import AppBlocks from "./AppBlocks";
 import { getCampagin } from "../controller";
 
-function FundPop(props: { productID: string }) {
-    const splittedID = props.productID.split("/");
-    const productId = splittedID[splittedID.length - 1];
+function Fundpop(props: { productId: string }) {
+    const splittedId = props.productId.split("/");
+    const productId = splittedId[splittedId.length - 1];
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -16,10 +16,9 @@ function FundPop(props: { productID: string }) {
                 })
                 .catch((err) => console.log("Fail to get campaign: ", err));
         })();
-    }, [props.productID]);
+    }, [props.productId]);
 
-    return data ? <AppBlocks data={data}/> : null;
-
+    return data ? <AppBlocks data={data} /> : null;
 }
 
-export default FundPop;
+export default Fundpop;

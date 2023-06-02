@@ -1,4 +1,4 @@
-# Add your FundPop Campaign to your Hydrogen storefront
+# Add your Fundpop Campaign to your Hydrogen storefront
 
 ### Step1: Install package
 
@@ -14,18 +14,18 @@ $ npm i fundpop-app
 $ yarn add fundpop-app
 ```
 
-### Step2: Go to your product page file on Hydrogen project
+### Step2: Go to your Product Page file on Hydrogen project
 
 -   For Demo Template, go to:
     `app/routes/($locale).products.$productHandle.tsx`
 
-### Step3: Import FundPop Component
+### Step3: Import Fundpop Component
 
 ```javascript
-import { FundPop } from "fundpop-app-blocks";
+import { Fundpop } from "fundpop-app";
 ```
 
-### Step4: Add FundPop Component to somewhere you like
+### Step4: Add Fundpop Component to somewhere you like in Product Page
 
 -   **Example for Demo Template**
 
@@ -43,17 +43,13 @@ export default function Product() {
             media={media.nodes}
           />
           <Heading as="h1" className="whitespace-normal">
-            {title}
+            { title }
           </Heading>
           <ProductForm />
-          <FundPop productID={id}/>
+          <Fundpop productId={ id }/>
         </div>
       <Section>
     </>
   )
 }
 ```
-
-## NOTE:
-
-The format of parameter **_productID_** is something like this: "**gid://shopify/Product/6923088920642**"

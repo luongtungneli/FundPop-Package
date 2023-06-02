@@ -1,1 +1,1 @@
-export { default as FundPop } from './FundPop'
+export { default as Fundpop } from "./Fundpop";
