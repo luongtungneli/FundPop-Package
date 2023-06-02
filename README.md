@@ -31,9 +31,9 @@ import { Fundpop } from "fundpop-app";
 
 ```javascript
 export default function Product() {
-  const {product, shop, recommended} = useLoaderData<typeof loader>();
-  const {media, title, vendor, descriptionHtml, id} = product;
-  const {shippingPolicy, refundPolicy} = shop;
+  const { product, shop, recommended } = useLoaderData<typeof loader>();
+  const { media, title, vendor, descriptionHtml, id } = product;
+  const { shippingPolicy, refundPolicy } = shop;
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function Product() {
             { title }
           </Heading>
           <ProductForm />
-          <Fundpop productId={ id }/>
+          <Fundpop productId={id}/>
         </div>
       <Section>
     </>
