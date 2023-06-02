@@ -1,6 +1,6 @@
 {
-  "name": "fundpop-app-blocks",
-  "version": "1.1.9",
+  "name": "fundpop-app",
+  "version": "1.0.0",
   "description": "Add your Fundpop Campaign to your Hydrogen storefront",
   "scripts": {
     "rollup": "rollup -c",
